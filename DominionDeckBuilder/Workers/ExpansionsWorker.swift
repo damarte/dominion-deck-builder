@@ -11,7 +11,7 @@ class ExpansionsWorker
         self.expansionStore = expansionStore
     }
     
-    func fetchExpansions(completionHandler: ([Expansion]) -> Void)
+    func fetchExpansions(completionHandler: @escaping ([Expansion]) -> Void)
     {
         expansionStore.fetchExpansions { (expansions: () throws -> [Expansion]) -> Void in
             do {
@@ -40,8 +40,8 @@ protocol ExpansionsStoreProtocol
     
     // MARK: CRUD operations - Inner closure
     
-    func fetchExpansions(completionHandler: (() throws -> [Expansion]) -> Void)
-    func fetchExpansion(id: String, completionHandler: (() throws -> Expansion?) -> Void)
+    func fetchExpansions(completionHandler: @escaping (() throws -> [Expansion]) -> Void)
+    func fetchExpansion(id: String, completionHandler: @escaping (() throws -> Expansion?) -> Void)
 }
 
 // MARK: - Orders store CRUD operation results

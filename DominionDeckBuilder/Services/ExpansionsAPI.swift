@@ -10,17 +10,17 @@ class ExpansionsAPI: ExpansionsStoreProtocol
         let ref = FIRDatabase.database().reference()
         
         ref.child("/").observeSingleEvent(of: .value, with: { (snapshot) in
-            let values = snapshot.value as? NSDictionary
+            let values = snapshot.value as? [String: [[String: AnyObject]]]
             var expansions: [Expansion] = []
             
-            for value in values?.allKeys as! [String] {
-                expansions.append(Expansion(name: value))
+            for value in values! {
+                expansions.append(Expansion(name: value.key))
             }
             
             completionHandler(expansions, nil)
             
         }) { (error) in
-            completionHandler([], ExpansionsStoreError.CannotFetch("No se han podido obtener las expanciones"))
+            completionHandler([], ExpansionsStoreError.CannotFetch("Cannot fetch expansions"))
         }
     }
     
@@ -29,19 +29,19 @@ class ExpansionsAPI: ExpansionsStoreProtocol
         let ref = FIRDatabase.database().reference()
         
         ref.child("/").observeSingleEvent(of: .value, with: { (snapshot) in
-            let values = snapshot.value as? NSDictionary
+            let values = snapshot.value as? [String: [[String: AnyObject]]]
             var expansion: Expansion?
             
-            for value in values?.allKeys as! [String] {
-                if(value == id){
-                    expansion = Expansion(name: value)
+            for value in values! {
+                if(value.key == id){
+                    expansion = Expansion(name: value.key)
                 }
             }
             
             completionHandler(expansion, nil)
             
         }) { (error) in
-            completionHandler(nil, ExpansionsStoreError.CannotFetch("No se han podido obtener la expansión"))
+            completionHandler(nil, ExpansionsStoreError.CannotFetch("Cannot fetch expansion"))
         }
     }
     
@@ -56,7 +56,6 @@ class ExpansionsAPI: ExpansionsStoreProtocol
             else{
                 completionHandler(ExpansionsStoreResult.Success(result: expansions))
             }
-            
         }
     }
     
@@ -74,17 +73,37 @@ class ExpansionsAPI: ExpansionsStoreProtocol
                     completionHandler(ExpansionsStoreResult.Failure(error: ExpansionsStoreError.CannotFetch("Cannot fetch expansion with id \(id)")))
                 }
             }
-            
         }
     }
     
     // MARK: - CRUD operations - Inner closure
     
-    func fetchExpansions(completionHandler: (() throws -> [Expansion]) -> Void)
+    func fetchExpansions(completionHandler: @escaping (() throws -> [Expansion]) -> Void)
     {
+        self.fetchExpansions { (expansions, error) in
+            if let error = error {
+                completionHandler { throw ExpansionsStoreError.CannotFetch(error.localizedDescription) }
+            }
+            else{
+                completionHandler { return expansions }
+            }
+        }
     }
     
-    func fetchExpansion(id: String, completionHandler: (() throws -> Expansion?) -> Void)
+    func fetchExpansion(id: String, completionHandler: @escaping (() throws -> Expansion?) -> Void)
     {
+        self.fetchExpansion(id:id) { (expansion, error) in
+            if let error = error {
+                completionHandler{ throw ExpansionsStoreError.CannotFetch(error.localizedDescription) }
+            }
+            else{
+                if let expansion = expansion {
+                    completionHandler{ return expansion }
+                }
+                else{
+                    completionHandler { throw ExpansionsStoreError.CannotFetch("Cannot fetch expansion with id \(id)") }
+                }
+            }
+        }
     }
 }

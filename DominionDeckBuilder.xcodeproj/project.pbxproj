@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052E486C1E43196600DA336D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E486B1E43196600DA336D /* Card.swift */; };
+		052E486E1E431AF300DA336D /* CardsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E486D1E431AF300DA336D /* CardsWorker.swift */; };
+		052E48701E431B5D00DA336D /* CardsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E486F1E431B5D00DA336D /* CardsAPI.swift */; };
+		052E48721E431C0800DA336D /* CardsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48711E431C0800DA336D /* CardsAPITests.swift */; };
+		052E48761E432A9C00DA336D /* ExpansionsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48751E432A9C00DA336D /* ExpansionsWorkerTests.swift */; };
+		052E48781E432C7500DA336D /* ExpansionsMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48771E432C7500DA336D /* ExpansionsMemStore.swift */; };
+		052E487A1E432F1800DA336D /* ExpansionsMemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48791E432F1800DA336D /* ExpansionsMemStoreTests.swift */; };
+		052E487C1E43367000DA336D /* CardsMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E487B1E43367000DA336D /* CardsMemStore.swift */; };
+		052E487E1E43395D00DA336D /* CardsMemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E487D1E43395D00DA336D /* CardsMemStoreTests.swift */; };
+		052E48801E433D9A00DA336D /* CardsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E487F1E433D9A00DA336D /* CardsWorkerTests.swift */; };
 		05CB06A11E3CCCA000C8370A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB06A01E3CCCA000C8370A /* AppDelegate.swift */; };
 		05CB06A31E3CCCA000C8370A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB06A21E3CCCA000C8370A /* ViewController.swift */; };
 		05CB06A61E3CCCA000C8370A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB06A41E3CCCA000C8370A /* Main.storyboard */; };
@@ -17,7 +27,7 @@
 		05FB9C6E1E3CD4E70034B28F /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB9C6D1E3CD4E70034B28F /* Expansion.swift */; };
 		05FB9C721E3CF4F80034B28F /* ExpansionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB9C711E3CF4F80034B28F /* ExpansionsAPI.swift */; };
 		05FB9C7A1E3CF5980034B28F /* DominionDeckBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB9C791E3CF5980034B28F /* DominionDeckBuilderTests.swift */; };
-		05FB9C851E3CF63E0034B28F /* ExpansionAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB9C841E3CF63E0034B28F /* ExpansionAPITests.swift */; };
+		05FB9C851E3CF63E0034B28F /* ExpansionsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB9C841E3CF63E0034B28F /* ExpansionsAPITests.swift */; };
 		747C4B32D9D58517B6DEE0EF /* Pods_DominionDeckBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6DFCDFAED06A30B7BE5CB7 /* Pods_DominionDeckBuilder.framework */; };
 		E7FD82FF34F5C45E940C67DE /* Pods_DominionDeckBuilderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8995F65A787B3A0D22AC34B /* Pods_DominionDeckBuilderTests.framework */; };
 /* End PBXBuildFile section */
@@ -33,6 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052E486B1E43196600DA336D /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		052E486D1E431AF300DA336D /* CardsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsWorker.swift; sourceTree = "<group>"; };
+		052E486F1E431B5D00DA336D /* CardsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsAPI.swift; sourceTree = "<group>"; };
+		052E48711E431C0800DA336D /* CardsAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsAPITests.swift; sourceTree = "<group>"; };
+		052E48751E432A9C00DA336D /* ExpansionsWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionsWorkerTests.swift; sourceTree = "<group>"; };
+		052E48771E432C7500DA336D /* ExpansionsMemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionsMemStore.swift; sourceTree = "<group>"; };
+		052E48791E432F1800DA336D /* ExpansionsMemStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionsMemStoreTests.swift; sourceTree = "<group>"; };
+		052E487B1E43367000DA336D /* CardsMemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsMemStore.swift; sourceTree = "<group>"; };
+		052E487D1E43395D00DA336D /* CardsMemStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsMemStoreTests.swift; sourceTree = "<group>"; };
+		052E487F1E433D9A00DA336D /* CardsWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsWorkerTests.swift; sourceTree = "<group>"; };
 		05CB069D1E3CCCA000C8370A /* DominionDeckBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionDeckBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB06A01E3CCCA000C8370A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB06A21E3CCCA000C8370A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +67,7 @@
 		05FB9C771E3CF5980034B28F /* DominionDeckBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DominionDeckBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FB9C791E3CF5980034B28F /* DominionDeckBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionDeckBuilderTests.swift; sourceTree = "<group>"; };
 		05FB9C7B1E3CF5980034B28F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05FB9C841E3CF63E0034B28F /* ExpansionAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionAPITests.swift; sourceTree = "<group>"; };
+		05FB9C841E3CF63E0034B28F /* ExpansionsAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionsAPITests.swift; sourceTree = "<group>"; };
 		270545D75E80B9BFBA454DA2 /* Pods-DominionDeckBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominionDeckBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DominionDeckBuilder/Pods-DominionDeckBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 		5963E96F026D22792AEE9B50 /* Pods-DominionDeckBuilderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominionDeckBuilderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DominionDeckBuilderTests/Pods-DominionDeckBuilderTests.release.xcconfig"; sourceTree = "<group>"; };
 		640B17F169354BED61E3E753 /* Pods-DominionDeckBuilderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DominionDeckBuilderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DominionDeckBuilderTests/Pods-DominionDeckBuilderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052E48731E432A6B00DA336D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		052E48741E432A7300DA336D /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				052E48751E432A9C00DA336D /* ExpansionsWorkerTests.swift */,
+				052E487F1E433D9A00DA336D /* CardsWorkerTests.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		05CB06941E3CCCA000C8370A = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				05FB9C6D1E3CD4E70034B28F /* Expansion.swift */,
+				052E486B1E43196600DA336D /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,7 +169,10 @@
 		05FB9C671E3CD3EF0034B28F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				052E48771E432C7500DA336D /* ExpansionsMemStore.swift */,
 				05FB9C711E3CF4F80034B28F /* ExpansionsAPI.swift */,
+				052E487B1E43367000DA336D /* CardsMemStore.swift */,
+				052E486F1E431B5D00DA336D /* CardsAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -141,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				05FB9C6B1E3CD49C0034B28F /* ExpansionsWorker.swift */,
+				052E486D1E431AF300DA336D /* CardsWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -148,35 +189,24 @@
 		05FB9C781E3CF5980034B28F /* DominionDeckBuilderTests */ = {
 			isa = PBXGroup;
 			children = (
-				05FB9C811E3CF5D90034B28F /* Scenes */,
+				052E48731E432A6B00DA336D /* Scenes */,
 				05FB9C821E3CF5D90034B28F /* Services */,
-				05FB9C831E3CF5D90034B28F /* Workers */,
+				052E48741E432A7300DA336D /* Workers */,
 				05FB9C791E3CF5980034B28F /* DominionDeckBuilderTests.swift */,
 				05FB9C7B1E3CF5980034B28F /* Info.plist */,
 			);
 			path = DominionDeckBuilderTests;
 			sourceTree = "<group>";
 		};
-		05FB9C811E3CF5D90034B28F /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		05FB9C821E3CF5D90034B28F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				05FB9C841E3CF63E0034B28F /* ExpansionAPITests.swift */,
+				05FB9C841E3CF63E0034B28F /* ExpansionsAPITests.swift */,
+				052E48711E431C0800DA336D /* CardsAPITests.swift */,
+				052E48791E432F1800DA336D /* ExpansionsMemStoreTests.swift */,
+				052E487D1E43395D00DA336D /* CardsMemStoreTests.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		05FB9C831E3CF5D90034B28F /* Workers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Workers;
 			sourceTree = "<group>";
 		};
 		D13F6515A8715714E865DA99 /* Pods */ = {
@@ -404,9 +434,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052E48781E432C7500DA336D /* ExpansionsMemStore.swift in Sources */,
+				052E48701E431B5D00DA336D /* CardsAPI.swift in Sources */,
+				052E486E1E431AF300DA336D /* CardsWorker.swift in Sources */,
 				05CB06A31E3CCCA000C8370A /* ViewController.swift in Sources */,
+				052E486C1E43196600DA336D /* Card.swift in Sources */,
 				05FB9C6C1E3CD49C0034B28F /* ExpansionsWorker.swift in Sources */,
 				05FB9C721E3CF4F80034B28F /* ExpansionsAPI.swift in Sources */,
+				052E487C1E43367000DA336D /* CardsMemStore.swift in Sources */,
 				05CB06A11E3CCCA000C8370A /* AppDelegate.swift in Sources */,
 				05FB9C6E1E3CD4E70034B28F /* Expansion.swift in Sources */,
 			);
@@ -416,8 +451,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05FB9C851E3CF63E0034B28F /* ExpansionAPITests.swift in Sources */,
+				052E48801E433D9A00DA336D /* CardsWorkerTests.swift in Sources */,
+				05FB9C851E3CF63E0034B28F /* ExpansionsAPITests.swift in Sources */,
+				052E487A1E432F1800DA336D /* ExpansionsMemStoreTests.swift in Sources */,
 				05FB9C7A1E3CF5980034B28F /* DominionDeckBuilderTests.swift in Sources */,
+				052E48721E431C0800DA336D /* CardsAPITests.swift in Sources */,
+				052E48761E432A9C00DA336D /* ExpansionsWorkerTests.swift in Sources */,
+				052E487E1E43395D00DA336D /* CardsMemStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +668,7 @@
 				05FB9C801E3CF5980034B28F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
