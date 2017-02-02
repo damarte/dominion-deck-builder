@@ -173,7 +173,11 @@ class ExpansionsMemStoreTests: XCTestCase
         var returnedExpansion: Expansion?
         let expect = expectation(description: "Wait for fetchExpansion() to return")
         sut.fetchExpansion(id: expansionToFetch.name) { (expansion: () throws -> Expansion?) -> Void in
-            returnedExpansion = try! expansion()
+            do {
+                returnedExpansion = try expansion()
+            } catch {
+                returnedExpansion = nil
+            }
             expect.fulfill()
         }
         waitForExpectations(timeout: 5.0) { (error: Error?) -> Void in

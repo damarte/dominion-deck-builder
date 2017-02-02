@@ -248,7 +248,11 @@ class CardsMemStoreTests: XCTestCase
         var returnedCard: Card?
         let expect = expectation(description: "Wait for fetchCard() to return")
         sut.fetchCard(id: cardToFetch.id) { (card: () throws -> Card?) -> Void in
-            returnedCard = try! card()
+            do {
+                returnedCard = try card()
+            } catch {
+                returnedCard = nil
+            }
             expect.fulfill()
         }
         waitForExpectations(timeout: 5.0) { (error: Error?) -> Void in

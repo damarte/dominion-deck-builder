@@ -10,12 +10,14 @@ class CardsAPI: CardsStoreProtocol
         let ref = FIRDatabase.database().reference()
         
         ref.child("/cards").observeSingleEvent(of: .value, with: { (snapshot) in
-            let values = snapshot.value as? [String: [[String: AnyObject]]]
+            
             var cards: [Card] = []
             
-            for value in values! {
-                for data in value.value {
-                    cards.append(self.cardFromDictionary(dictionary: data))
+            if let values = snapshot.value as? [String: [[String: AnyObject]]] {
+                for value in values {
+                    for data in value.value {
+                        cards.append(self.cardFromDictionary(dictionary: data))
+                    }
                 }
             }
             
@@ -31,11 +33,13 @@ class CardsAPI: CardsStoreProtocol
         let ref = FIRDatabase.database().reference()
         
         ref.child("/cards/\(expansion.name)").observeSingleEvent(of: .value, with: { (snapshot) in
-            let values = snapshot.value as? [[String: AnyObject]]
+            
             var cards: [Card] = []
             
-            for data in values! {
-                cards.append(self.cardFromDictionary(dictionary: data))
+            if let values = snapshot.value as? [[String: AnyObject]] {
+                for data in values {
+                    cards.append(self.cardFromDictionary(dictionary: data))
+                }
             }
             
             completionHandler(cards, nil)
@@ -50,14 +54,16 @@ class CardsAPI: CardsStoreProtocol
         let ref = FIRDatabase.database().reference()
         
         ref.child("/cards").observeSingleEvent(of: .value, with: { (snapshot) in
-            let values = snapshot.value as? [String: [[String: AnyObject]]]
+            
             var card: Card?
             
-            for value in values! {
-                for data in value.value {
-                    if(String(data["id"] as! Int) == id){
-                        card = self.cardFromDictionary(dictionary: data) as Card?
-                        break
+            if let values = snapshot.value as? [String: [[String: AnyObject]]] {
+                for value in values {
+                    for data in value.value {
+                        if(String(data["id"] as! Int) == id){
+                            card = self.cardFromDictionary(dictionary: data) as Card?
+                            break
+                        }
                     }
                 }
             }
