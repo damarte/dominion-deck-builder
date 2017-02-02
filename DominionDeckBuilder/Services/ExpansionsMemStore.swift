@@ -5,8 +5,8 @@ class ExpansionsMemStore: ExpansionsStoreProtocol
     // MARK: - Data
     
     var expansions = [
-        Expansion(name: "Dominion"),
-        Expansion(name: "Dark Ages"),
+        Expansion(name: "Dominion", numCards: 0),
+        Expansion(name: "Dark Ages", numCards: 0),
     ]
     
     // MARK: - CRUD operations - Optional error

@@ -1,5 +1,5 @@
-@testable import DominionDeckBuilder
 import XCTest
+@testable import DominionDeckBuilder
 
 class CardsAPITests: XCTestCase
 {
@@ -58,7 +58,7 @@ class CardsAPITests: XCTestCase
         var returnedCards = [Card]()
         let expect = expectation(description: "Wait for fetchCards() to return")
         
-        sut.fetchCards(expansion: Expansion(name: "Dominion")) { (cards: [Card], error: CardsStoreError?) -> Void in
+        sut.fetchCards(expansion: Expansion(name: "Dominion", numCards: 0)) { (cards: [Card], error: CardsStoreError?) -> Void in
             XCTAssertNil(error, "fetchCards() should not return an error: \(error)")
             returnedCards = cards
             expect.fulfill()
@@ -126,7 +126,7 @@ class CardsAPITests: XCTestCase
         var returnedCards = [Card]()
         let expect = expectation(description: "Wait for fetchCards() to return")
         
-        sut.fetchCards(expansion: Expansion(name: "Dominion")) { (result: CardsStoreResult<[Card]>) -> Void in
+        sut.fetchCards(expansion: Expansion(name: "Dominion", numCards: 0)) { (result: CardsStoreResult<[Card]>) -> Void in
             switch (result) {
             case .Success(let cards):
                 returnedCards = cards
@@ -197,7 +197,7 @@ class CardsAPITests: XCTestCase
         var returnedCards = [Card]()
         let expect = expectation(description: "Wait for fetchCards() to return")
         
-        sut.fetchCards(expansion: Expansion(name: "Dominion")) { (cards: () throws -> [Card]) -> Void in
+        sut.fetchCards(expansion: Expansion(name: "Dominion", numCards: 0)) { (cards: () throws -> [Card]) -> Void in
             returnedCards = try! cards()
             expect.fulfill()
         }

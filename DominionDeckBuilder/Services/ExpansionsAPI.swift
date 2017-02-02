@@ -9,12 +9,12 @@ class ExpansionsAPI: ExpansionsStoreProtocol
     {
         let ref = FIRDatabase.database().reference()
         
-        ref.child("/").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("/cards").observeSingleEvent(of: .value, with: { (snapshot) in
             let values = snapshot.value as? [String: [[String: AnyObject]]]
             var expansions: [Expansion] = []
             
             for value in values! {
-                expansions.append(Expansion(name: value.key))
+                expansions.append(Expansion(name: value.key, numCards: value.value.count))
             }
             
             completionHandler(expansions, nil)
@@ -28,13 +28,13 @@ class ExpansionsAPI: ExpansionsStoreProtocol
     {
         let ref = FIRDatabase.database().reference()
         
-        ref.child("/").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("/cards").observeSingleEvent(of: .value, with: { (snapshot) in
             let values = snapshot.value as? [String: [[String: AnyObject]]]
             var expansion: Expansion?
             
             for value in values! {
                 if(value.key == id){
-                    expansion = Expansion(name: value.key)
+                    expansion = Expansion(name: value.key, numCards: value.value.count)
                 }
             }
             

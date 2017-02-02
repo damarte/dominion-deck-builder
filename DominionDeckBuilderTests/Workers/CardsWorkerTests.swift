@@ -1,5 +1,5 @@
-@testable import DominionDeckBuilder
 import XCTest
+@testable import DominionDeckBuilder
 
 class CardsWorkerTests: XCTestCase
 {
@@ -41,8 +41,8 @@ class CardsWorkerTests: XCTestCase
             DispatchQueue.main.asyncAfter(deadline: oneSecond, execute: {
                 completionHandler {
                     return [
-                        Card(costPotions: 0, costTreasure: 3, description: "Prueba1", expansion: Expansion(name: "Dominion"), id: "1", isAttack: false, isReaction: false, name: "Prueba1", plusActions: 2, plusBuys: 2, plusCards: 2, plusTreasure: 0, trashes: 0, treasure: 0, victoryPoints: 0),
-                        Card(costPotions: 0, costTreasure: 2, description: "Prueba2", expansion: Expansion(name: "Dark Age"), id: "1", isAttack: false, isReaction: false, name: "Prueba2", plusActions: 1, plusBuys: 1, plusCards: 1, plusTreasure: 0, trashes: 0, treasure: 0, victoryPoints: 0),
+                        Card(costPotions: 0, costTreasure: 3, description: "Prueba1", expansion: Expansion(name: "Dominion", numCards: 0), id: "1", isAttack: false, isReaction: false, name: "Prueba1", plusActions: 2, plusBuys: 2, plusCards: 2, plusTreasure: 0, trashes: 0, treasure: 0, victoryPoints: 0),
+                        Card(costPotions: 0, costTreasure: 2, description: "Prueba2", expansion: Expansion(name: "Dark Age", numCards: 0), id: "1", isAttack: false, isReaction: false, name: "Prueba2", plusActions: 1, plusBuys: 1, plusCards: 1, plusTreasure: 0, trashes: 0, treasure: 0, victoryPoints: 0),
                         ]
                 }
             })

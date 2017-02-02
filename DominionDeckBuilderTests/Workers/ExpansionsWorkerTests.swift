@@ -1,5 +1,5 @@
-@testable import DominionDeckBuilder
 import XCTest
+@testable import DominionDeckBuilder
 
 class ExpansionsWorkerTests: XCTestCase
 {
@@ -41,8 +41,8 @@ class ExpansionsWorkerTests: XCTestCase
             DispatchQueue.main.asyncAfter(deadline: oneSecond, execute: {
                 completionHandler {
                     return [
-                        Expansion(name: "Dominion"),
-                        Expansion(name: "Dark Ages"),
+                        Expansion(name: "Dominion", numCards: 0),
+                        Expansion(name: "Dark Ages", numCards: 0),
                         ]
                 }
             })

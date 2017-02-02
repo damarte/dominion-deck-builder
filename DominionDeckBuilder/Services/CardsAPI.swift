@@ -9,7 +9,7 @@ class CardsAPI: CardsStoreProtocol
     {
         let ref = FIRDatabase.database().reference()
         
-        ref.child("/").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("/cards").observeSingleEvent(of: .value, with: { (snapshot) in
             let values = snapshot.value as? [String: [[String: AnyObject]]]
             var cards: [Card] = []
             
@@ -30,7 +30,7 @@ class CardsAPI: CardsStoreProtocol
     {
         let ref = FIRDatabase.database().reference()
         
-        ref.child("/\(expansion.name)").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("/cards/\(expansion.name)").observeSingleEvent(of: .value, with: { (snapshot) in
             let values = snapshot.value as? [[String: AnyObject]]
             var cards: [Card] = []
             
@@ -49,7 +49,7 @@ class CardsAPI: CardsStoreProtocol
     {
         let ref = FIRDatabase.database().reference()
         
-        ref.child("/").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("/cards").observeSingleEvent(of: .value, with: { (snapshot) in
             let values = snapshot.value as? [String: [[String: AnyObject]]]
             var card: Card?
             
@@ -161,7 +161,7 @@ class CardsAPI: CardsStoreProtocol
         return Card(costPotions: (dictionary["cost_potions"] != nil) ? dictionary["cost_potions"] as! Int : 0,
                     costTreasure: (dictionary["cost_treasure"] != nil) ? dictionary["cost_treasure"] as! Int : 0,
                     description: (dictionary["description"] != nil) ? dictionary["description"] as! String : "",
-                    expansion: Expansion(name: (dictionary["expansion"] != nil) ? dictionary["expansion"] as! String : ""),
+                    expansion: Expansion(name: (dictionary["expansion"] != nil) ? dictionary["expansion"] as! String : "", numCards: 0),
                     id: String((dictionary["id"] != nil) ? dictionary["id"] as! Int : 0),
                     isAttack: dictionary["is_attack"] as! Bool,
                     isReaction: dictionary["is_reaction"] as! Bool,

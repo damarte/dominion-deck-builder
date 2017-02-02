@@ -1,5 +1,5 @@
-@testable import DominionDeckBuilder
 import XCTest
+@testable import DominionDeckBuilder
 
 class ExpansionsAPITests: XCTestCase
 {

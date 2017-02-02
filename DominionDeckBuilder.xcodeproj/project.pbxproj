@@ -17,6 +17,15 @@
 		052E487C1E43367000DA336D /* CardsMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E487B1E43367000DA336D /* CardsMemStore.swift */; };
 		052E487E1E43395D00DA336D /* CardsMemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E487D1E43395D00DA336D /* CardsMemStoreTests.swift */; };
 		052E48801E433D9A00DA336D /* CardsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E487F1E433D9A00DA336D /* CardsWorkerTests.swift */; };
+		052E48981E434AB600DA336D /* ListExpansionsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48911E434AB600DA336D /* ListExpansionsConfigurator.swift */; };
+		052E48991E434AB600DA336D /* ListExpansionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48921E434AB600DA336D /* ListExpansionsInteractor.swift */; };
+		052E489A1E434AB600DA336D /* ListExpansionsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48931E434AB600DA336D /* ListExpansionsModels.swift */; };
+		052E489B1E434AB600DA336D /* ListExpansionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48941E434AB600DA336D /* ListExpansionsPresenter.swift */; };
+		052E489C1E434AB600DA336D /* ListExpansionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48951E434AB600DA336D /* ListExpansionsRouter.swift */; };
+		052E489D1E434AB600DA336D /* ListExpansionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48961E434AB600DA336D /* ListExpansionsViewController.swift */; };
+		052E48A41E434EEE00DA336D /* ListExpansionsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48A01E434EEE00DA336D /* ListExpansionsInteractorTests.swift */; };
+		052E48A51E434EEE00DA336D /* ListExpansionsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48A11E434EEE00DA336D /* ListExpansionsPresenterTests.swift */; };
+		052E48A61E434EEE00DA336D /* ListExpansionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E48A21E434EEE00DA336D /* ListExpansionsViewControllerTests.swift */; };
 		05CB06A11E3CCCA000C8370A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB06A01E3CCCA000C8370A /* AppDelegate.swift */; };
 		05CB06A31E3CCCA000C8370A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB06A21E3CCCA000C8370A /* ViewController.swift */; };
 		05CB06A61E3CCCA000C8370A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB06A41E3CCCA000C8370A /* Main.storyboard */; };
@@ -53,6 +62,15 @@
 		052E487B1E43367000DA336D /* CardsMemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsMemStore.swift; sourceTree = "<group>"; };
 		052E487D1E43395D00DA336D /* CardsMemStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsMemStoreTests.swift; sourceTree = "<group>"; };
 		052E487F1E433D9A00DA336D /* CardsWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsWorkerTests.swift; sourceTree = "<group>"; };
+		052E48911E434AB600DA336D /* ListExpansionsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsConfigurator.swift; sourceTree = "<group>"; };
+		052E48921E434AB600DA336D /* ListExpansionsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsInteractor.swift; sourceTree = "<group>"; };
+		052E48931E434AB600DA336D /* ListExpansionsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsModels.swift; sourceTree = "<group>"; };
+		052E48941E434AB600DA336D /* ListExpansionsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsPresenter.swift; sourceTree = "<group>"; };
+		052E48951E434AB600DA336D /* ListExpansionsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsRouter.swift; sourceTree = "<group>"; };
+		052E48961E434AB600DA336D /* ListExpansionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsViewController.swift; sourceTree = "<group>"; };
+		052E48A01E434EEE00DA336D /* ListExpansionsInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsInteractorTests.swift; sourceTree = "<group>"; };
+		052E48A11E434EEE00DA336D /* ListExpansionsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsPresenterTests.swift; sourceTree = "<group>"; };
+		052E48A21E434EEE00DA336D /* ListExpansionsViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExpansionsViewControllerTests.swift; sourceTree = "<group>"; };
 		05CB069D1E3CCCA000C8370A /* DominionDeckBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionDeckBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB06A01E3CCCA000C8370A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB06A21E3CCCA000C8370A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +117,7 @@
 		052E48731E432A6B00DA336D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				052E489F1E434EDB00DA336D /* ListExpansions */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -110,6 +129,37 @@
 				052E487F1E433D9A00DA336D /* CardsWorkerTests.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		052E48811E43489E00DA336D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				052E48901E434AB600DA336D /* ListExpansions */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		052E48901E434AB600DA336D /* ListExpansions */ = {
+			isa = PBXGroup;
+			children = (
+				052E48911E434AB600DA336D /* ListExpansionsConfigurator.swift */,
+				052E48921E434AB600DA336D /* ListExpansionsInteractor.swift */,
+				052E48931E434AB600DA336D /* ListExpansionsModels.swift */,
+				052E48941E434AB600DA336D /* ListExpansionsPresenter.swift */,
+				052E48951E434AB600DA336D /* ListExpansionsRouter.swift */,
+				052E48961E434AB600DA336D /* ListExpansionsViewController.swift */,
+			);
+			path = ListExpansions;
+			sourceTree = "<group>";
+		};
+		052E489F1E434EDB00DA336D /* ListExpansions */ = {
+			isa = PBXGroup;
+			children = (
+				052E48A01E434EEE00DA336D /* ListExpansionsInteractorTests.swift */,
+				052E48A11E434EEE00DA336D /* ListExpansionsPresenterTests.swift */,
+				052E48A21E434EEE00DA336D /* ListExpansionsViewControllerTests.swift */,
+			);
+			path = ListExpansions;
 			sourceTree = "<group>";
 		};
 		05CB06941E3CCCA000C8370A = {
@@ -136,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				05FB9C651E3CD3EF0034B28F /* Models */,
-				05FB9C661E3CD3EF0034B28F /* Scenes */,
+				052E48811E43489E00DA336D /* Scenes */,
 				05FB9C671E3CD3EF0034B28F /* Services */,
 				05FB9C681E3CD3EF0034B28F /* Workers */,
 				05CB06A01E3CCCA000C8370A /* AppDelegate.swift */,
@@ -157,13 +207,6 @@
 				052E486B1E43196600DA336D /* Card.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		05FB9C661E3CD3EF0034B28F /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		05FB9C671E3CD3EF0034B28F /* Services */ = {
@@ -434,9 +477,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052E489D1E434AB600DA336D /* ListExpansionsViewController.swift in Sources */,
 				052E48781E432C7500DA336D /* ExpansionsMemStore.swift in Sources */,
 				052E48701E431B5D00DA336D /* CardsAPI.swift in Sources */,
+				052E489A1E434AB600DA336D /* ListExpansionsModels.swift in Sources */,
+				052E489C1E434AB600DA336D /* ListExpansionsRouter.swift in Sources */,
+				052E48981E434AB600DA336D /* ListExpansionsConfigurator.swift in Sources */,
+				052E489B1E434AB600DA336D /* ListExpansionsPresenter.swift in Sources */,
 				052E486E1E431AF300DA336D /* CardsWorker.swift in Sources */,
+				052E48991E434AB600DA336D /* ListExpansionsInteractor.swift in Sources */,
 				05CB06A31E3CCCA000C8370A /* ViewController.swift in Sources */,
 				052E486C1E43196600DA336D /* Card.swift in Sources */,
 				05FB9C6C1E3CD49C0034B28F /* ExpansionsWorker.swift in Sources */,
@@ -451,12 +500,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052E48A61E434EEE00DA336D /* ListExpansionsViewControllerTests.swift in Sources */,
+				052E48A41E434EEE00DA336D /* ListExpansionsInteractorTests.swift in Sources */,
 				052E48801E433D9A00DA336D /* CardsWorkerTests.swift in Sources */,
 				05FB9C851E3CF63E0034B28F /* ExpansionsAPITests.swift in Sources */,
 				052E487A1E432F1800DA336D /* ExpansionsMemStoreTests.swift in Sources */,
 				05FB9C7A1E3CF5980034B28F /* DominionDeckBuilderTests.swift in Sources */,
 				052E48721E431C0800DA336D /* CardsAPITests.swift in Sources */,
 				052E48761E432A9C00DA336D /* ExpansionsWorkerTests.swift in Sources */,
+				052E48A51E434EEE00DA336D /* ListExpansionsPresenterTests.swift in Sources */,
 				052E487E1E43395D00DA336D /* CardsMemStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
