@@ -65,6 +65,18 @@ class ListExpansionsViewControllerTests: XCTestCase
         }
     }
     
+    class TableViewSpy: UITableView
+    {
+        // MARK: Method call expectations
+        var reloadDataCalled = false
+        
+        // MARK: Spied methods
+        override func reloadData()
+        {
+            reloadDataCalled = true
+        }
+    }
+    
     // MARK: - Tests
     
     func testShouldFetchExpansionsWhenViewIsLoaded()
@@ -78,5 +90,69 @@ class ListExpansionsViewControllerTests: XCTestCase
         
         // Then
         XCTAssert(listExpansionsViewControllerOutputSpy.fetchExpansionsCalled, "Should fetch expansions when the view is loaded")
+    }
+    
+    func testShouldDisplayFetchedExpansions()
+    {
+        // Given
+        let tableViewSpy = TableViewSpy()
+        sut.tableView = tableViewSpy
+        
+        let displayedExpansions = [ListExpansions.FetchExpansions.ViewModel.DisplayedExpansion(name: "Dominion", numCards: 0)]
+        let viewModel = ListExpansions.FetchExpansions.ViewModel(displayedExpansions: displayedExpansions)
+        
+        // When
+        sut.displayFetchedExpansions(viewModel: viewModel)
+        
+        // Then
+        XCTAssert(tableViewSpy.reloadDataCalled, "Displaying fetched expansions should reload the table view")
+    }
+    
+    func testNumberOfSectionsInTableViewShouldAlwaysBeOne()
+    {
+        loadView()
+        
+        // Given
+        let tableView = sut.tableView
+        
+        // When
+        let numberOfSections = sut.numberOfSections(in: tableView!)
+        
+        // Then
+        XCTAssertEqual(numberOfSections, 1, "The number of table view sections should always be 1")
+    }
+    
+    func testNumberOfRowsInAnySectionShouldEqaulNumberOfOrdersToDisplay()
+    {
+        loadView()
+        
+        // Given
+        let tableView = sut.tableView
+        let testDisplayedExpansions = [ListExpansions.FetchExpansions.ViewModel.DisplayedExpansion(name: "Dominion", numCards: 0)]
+        sut.displayedExpansions = testDisplayedExpansions
+        
+        // When
+        let numberOfRows = sut.tableView(tableView!, numberOfRowsInSection: 0)
+        
+        // Then
+        XCTAssertEqual(numberOfRows, testDisplayedExpansions.count, "The number of table view rows should equal the number of objects to display")
+    }
+    
+    func testShouldConfigureTableViewCellToDisplayOrder()
+    {
+        loadView()
+        
+        // Given
+        let tableView = sut.tableView
+        let testDisplayedOrders = [ListExpansions.FetchExpansions.ViewModel.DisplayedExpansion(name: "Dominion", numCards: 0)]
+        sut.displayedExpansions = testDisplayedOrders
+        
+        // When
+        let indexPath = IndexPath(item: 0, section: 0)
+        let cell = sut.tableView(tableView!, cellForRowAt: indexPath)
+        
+        // Then
+        XCTAssertEqual(cell.textLabel?.text, "Dominion", "A properly configured table view cell should display the title")
+        XCTAssertEqual(cell.detailTextLabel?.text, "0 cards", "A properly configured table view cell should display the subtitle")
     }
 }

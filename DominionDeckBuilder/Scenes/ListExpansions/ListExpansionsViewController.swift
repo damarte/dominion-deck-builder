@@ -24,6 +24,8 @@ protocol ListExpansionsViewControllerOutput
 class ListExpansionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ListExpansionsViewControllerInput
 {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var buttonView: UIView!
+    @IBOutlet weak var generateButton: UIButton!
     
     var output: ListExpansionsViewControllerOutput!
     var router: ListExpansionsRouter!
